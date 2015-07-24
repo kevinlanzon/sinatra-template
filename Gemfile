@@ -15,5 +15,5 @@ group :development, :test do
   gem 'shotgun'
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'bcrypt-ruby'
+  gem 'bcrypt'
 end
