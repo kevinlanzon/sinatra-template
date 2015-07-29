@@ -2,10 +2,10 @@ require 'bcrypt'
 
 class User
 
+  include DataMapper::Resource
+
   attr_reader :password
   attr_accessor :password_confirmation
-
-  include DataMapper::Resource
 
   property :id, Serial
   property :email, String, required: true
@@ -49,7 +49,6 @@ class User
 
   validates_confirmation_of :password
   validates_uniqueness_of :email
-  validates_presence_of :email
   # validates_confirmation_of is a DataMapper method
   # provided especially for validating confirmation passwords
   # The model will not save unless both password

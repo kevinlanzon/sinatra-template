@@ -6,17 +6,17 @@
     <link rel="stylesheet" href="/css/bootstrap-responsive.css">
   </head>
   <body>
-  <nav>
-  <ul class="nav nav-tabs">
-    <li><a class="btn btn-warning" href="/users/new" id='sign up' name='sign up' style="text-align:center">Sign up</a></li>
-  </ul>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <a class="navbar-brand" href="/">SinatraApp</a>
+    <a class="btn btn-default navbar-btn" href="/sessions/new">Sign in</a>
+    <a class="btn btn-default navbar-btn" href="/users/new">Sign up</a>
   </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3"></div>
-          <div class="col-md-6">
-        </div>
-      </div>
+  <div class="panel panel-default">
+  <div class="panel-body">
+    Basic panel example
+  </div>
+</div>
+
     <% if current_user %>
       Welcome, <%= current_user.email %>
       <form method='post' action='/sessions'>

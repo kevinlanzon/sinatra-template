@@ -7,6 +7,7 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'sinatra-flash'
 gem 'puma'
+gem 'sinatra-partial'
 
 group :development, :test do
   gem 'capybara'
