@@ -15,8 +15,7 @@ class SinatraApp < Sinatra::Base
 
   include UserSessions
 
-  set :views, proc { File.join('./app/views') }
-  set :public_folder, Proc.new { File.join(root, '..', "public") }
+  set :root, File.dirname(__FILE__)
   enable :sessions
   set :session_secret, 'super secret'
   register Sinatra::Flash
