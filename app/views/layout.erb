@@ -6,32 +6,17 @@
     <link rel="stylesheet" href="/css/bootstrap-responsive.css">
   </head>
   <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <a class="navbar-brand" href="/">SinatraApp</a>
-    <a class="btn btn-default navbar-btn" href="/sessions/new">Sign in</a>
-    <a class="btn btn-default navbar-btn" href="/users/new">Sign up</a>
-  </nav>
-  <div class="panel panel-default">
-  <div class="panel-body">
-    Basic panel example
-  </div>
-</div>
-
-    <% if current_user %>
-      Welcome, <%= current_user.email %>
-      <form method='post' action='/sessions'>
-        <input type='hidden' name='_method' value='delete'>
-        <input class="btn btn-warning" type='submit' value='Sign out'>
-      </form>
-    <% end %>
-      <% if flash[:errors] && !flash[:errors].empty? %>
-        Please refer to the following errors below:
-      <ul id='errors'>
-        <% flash[:errors].each do |error| %>
-        <li><%= error %></li>
-      <% end %>
-      </ul>
-      <% end %>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <a class="navbar-brand" href="/">SinatraApp</a>
+      <a class="btn btn-default navbar-btn" href="/sessions/new">Sign in</a>
+      <a class="btn btn-default navbar-btn" href="/users/new">Sign up</a>
+    </nav>
+      <div class="panel panel-default">
+        <div class="panel-body">
+        </div>
+      </div>
+    <%= partial :welcome_message %>
+    <%= partial :flash %>
     <%= yield %>
     <script src="/js/bootstrap.min.js"></script>
   </body>
