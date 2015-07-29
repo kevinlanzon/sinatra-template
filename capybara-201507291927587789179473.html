@@ -14,9 +14,15 @@
         <div class="panel-body">
         </div>
       </div>
-    <%= partial :welcome_message %>
-    <%= partial :flash %>
-    <%= yield %>
+    
+    
+    Reset your password:
+
+<form method='post' action='/password_reset'>
+  Email: <input type='text' name='email'>
+  <!-- Reset password: <input type='password' name='password'> -->
+  <input class="btn btn-default navbar-btn" type='submit' value='Reset password'>
+</form>
     <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
