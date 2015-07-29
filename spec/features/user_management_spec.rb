@@ -69,9 +69,7 @@ feature 'Password reset' do
     user = User.create(email: 'test@test.com', password: 'secret1234',
                     password_confirmation: 'secret1234')
     visit '/password_reset'
-    save_and_open_page
     fill_in :email, with: user.email
-    save_and_open_page
     click_button 'Reset password'
     user = User.first(email: user.email)
     expect(user.password_token).not_to be_nil

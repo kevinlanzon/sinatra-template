@@ -17,4 +17,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'launchy'
   gem 'bcrypt'
+  gem 'sinatra-assets'
 end

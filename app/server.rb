@@ -15,7 +15,7 @@ class SinatraApp < Sinatra::Base
 
   include UserSessions
 
-  set :root, File.dirname(__FILE__)
+  set :root, File.dirname(__FILE__) # sets app/. as default route
   enable :sessions
   set :session_secret, 'super secret'
   register Sinatra::Flash
